@@ -51,8 +51,18 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distancia1 = Math.abs(cat1 - mouse);
+  let distancia2 = Math.abs(cat2 - mouse);
+  let quemPega = '';
+  if (distancia1 < distancia2) {
+    quemPega = 'cat1';
+  } else if (distancia1 > distancia2) {
+    quemPega = 'cat2';
+  } else {
+    quemPega = 'os gatos trombam e o rato foge';
+  }
+  return quemPega;
 }
 
 // Desafio 8
