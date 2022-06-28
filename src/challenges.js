@@ -84,19 +84,6 @@ function fizzBuzz(parametros) {
 
 // Desafio 9
 function encode(string) {
-  // let letras = ['a', 'e', 'i', 'o', 'u'];
-  // let numeros = [1, 2, 3, 4, 5];
-  // let palavra = '';
-  // for (let index in string){
-  //   for (let index2 in numeros){
-  //     if (string[index] === letras[index]){
-  //       palavra += numeros[index2];
-  //     }else {
-  //       palavra += string[index]
-  //     }
-  //   }
-  // }
-  // return palavra 
   let code ={
     a: 1,
     e: 2,
@@ -126,8 +113,21 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tecnologias, nome) {
+  let array = [];
+  let technologies = tecnologias.sort();
+  if (technologies.length === 0){
+    array = 'Vazio!';
+  }else {
+    for (index in technologies) {
+       let objeto = {
+        tech : technologies[index],
+        name : nome
+     }
+    array.push(objeto)
+    }
+  }
+  return array;
 }
 
 module.exports = {
